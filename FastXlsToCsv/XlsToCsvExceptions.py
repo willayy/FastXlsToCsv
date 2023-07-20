@@ -12,4 +12,4 @@ class OutputIsNotDirException(Exception):
 
 class AutoFindExcelException(Exception):
     def __init__(self, message = "No path to excel was found when XlsConverter tried to look in normal installation locations. Please provide a path to EXCEL.EXE") -> None:
-        super().__init__(*args)
+        super().__init__(message)
