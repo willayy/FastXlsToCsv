@@ -14,7 +14,7 @@ class XlsConverter:
     excelPath: str
 
     def __init__(self, excelPath: str = "AutoFind") -> None:
-        if self.excelPath == "AutoFind":
+        if  excelPath == "AutoFind":
             self.excelPath = self.__findExcelWindows()
         else:
             self.excelPath = excelPath
@@ -30,11 +30,11 @@ class XlsConverter:
         to the directory corresponding to the str.
         ## Errors
         """
-        if self.__checkIfPathIsDir(self, inputDir) is False:
+        if self.__checkIfPathIsDir(inputDir) is False:
             InputIsNotDirException()
 
         excelPath: str = self.excelPath
-        scriptPath: str = "FastXlsToCsv\basScripts\ConvertXlsDir.bas"
+        scriptPath: str = os.path.abspath(r"FastXlsToCsv\basScripts\ConvertXlsDir.bas")
         arg1: str = inputDir
         arg2: str = outputDir
 
@@ -48,7 +48,6 @@ class XlsConverter:
         ]
         subprocess.run(cmd)
 
-        
     def convertXlsFileToCsv(self, inputFile: str, outPutDir: str) -> None:
         pass
 
