@@ -38,15 +38,7 @@ class XlsConverter:
         arg1: str = inputDir
         arg2: str = outputDir
 
-        cmd = [
-        excelPath,
-        "/e",                   # Start Excel without displaying the UI
-        "/NoSplash",            # Disable the splash screen
-        "/x", scriptPath,       # Path to your VBA script
-        arg1,                   # First argument
-        arg2                    # Second argument
-        ]
-        subprocess.run(cmd)
+        
 
     def convertXlsFileToCsv(self, inputFile: str, outPutDir: str) -> None:
         pass
