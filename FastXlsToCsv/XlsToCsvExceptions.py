@@ -10,6 +10,6 @@ class OutputIsNotDirException(Exception):
     def __init__(self, message = "The provided input to outputDir is not a str path to a directory ") -> None:
         super().__init__(message)
 
-class AutoFindExcelException(Exception):
-    def __init__(self, message = "No path to excel was found when XlsConverter tried to look in normal installation locations. Please provide a path to EXCEL.EXE") -> None:
+class FastXlsToCsvModuleError(Exception):
+    def __init__(self, message = "There was a script error from within the FastXlsToCsv module, please check for bad input and then report to module developer") -> None:
         super().__init__(message)

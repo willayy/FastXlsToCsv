@@ -5,40 +5,48 @@ import os
 class XlsConverter:
     """
     ## XlsConverter class
-
-    ### How to use?
+    ### Requirements:
+    You have Excel installed on your computer, right now its only tested with Microsoft Excel 2016.
+    ### How to use?:
     Instantiate an object of this class to gain access to conversion methods, you can choose to exclude a excelPath argument in the constructor.
     Excluding excelPath will make XlsConverter try to find your excel installation by trying from a small set of options. As you may understand this is not very safe so 
     providing your own path is recommended.
     """
     excelPath: str
 
-    def __init__(self, excelPath: str = "AutoFind") -> None:
-        if  excelPath == "AutoFind":
-            self.excelPath = self.__findExcelWindows()
-        else:
-            self.excelPath = excelPath
+    def __init__(self) -> None:
+        self
+        
 
     def convertXlsDirToCsv(self, inputDir: str, outputDir: str) -> None:
         """
-        ## Convert Xls Dir to Csv
+        ## Convert Xls/Xlsx Dir to Csv
         ### inputDir: 
         takes str as argument and will attempt to convert all .xlsx and .xls
-        files in the directory corresponding to the str.
+        files in the directory corresponding to the str. The input may contain other files.
         ### outputDir: 
         takes str as argument and will attempt to export the csv files converted
         to the directory corresponding to the str.
-        ## Errors
         """
         if self.__checkIfPathIsDir(inputDir) is False:
             InputIsNotDirException()
 
-        excelPath: str = self.excelPath
-        scriptPath: str = os.path.abspath(r"FastXlsToCsv\basScripts\ConvertXlsDir.bas")
-        arg1: str = inputDir
-        arg2: str = outputDir
+        scriptPath: str = os.path.abspath(r"FastXlsToCsv\vbScripts\ConvertXlDir.vbs")
 
-        
+        try: 
+            subprocess.run(["cscript", scriptPath, inputDir, outputDir], check = True)
+        except Exception:
+            raise FastXlsToCsvModuleError()
+
+    def convertXlsFileToCsv(self, inputFile: str, outputDir: str) -> None:
+        """
+        ## Convert Xls/Xlsx File to Csv
+        ## inputFile:
+        takes str argument and will attempt to convert only this xls/xlsx file.
+        ## outputDir:
+        takes str argument and will attempt to exprot the csv files converted to the
+        directory corresponding to the str
+        """
 
     def convertXlsFileToCsv(self, inputFile: str, outPutDir: str) -> None:
         pass
@@ -53,17 +61,5 @@ class XlsConverter:
         extension = os.path.splitext(filePath)[1]
         return (extension == ".xls" or extension == ".xlsx")
 
-    def __findExcelWindows(self):
-        "Tries to find Excel on windows, raises error if it doesnt, refuses to elaborate."
-
-        possible_paths = [
-            "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
-            "C:\\Program Files (x86)\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
-        ]
-
-        for path in possible_paths:
-            if os.path.exists(path):
-                return path
-
-        raise AutoFindExcelException()
+   
     
