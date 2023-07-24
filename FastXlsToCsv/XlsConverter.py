@@ -31,13 +31,13 @@ def convertXlDirToCsv(inputDir: str, outputDir: str) -> None:
     contact developer https://github.com/willayy
     """
 
-    if __checkIfPathIsDir(inputDir) is False:
+    if __checkIfPathIsDir(inputDir) is False: #Checks if the dir exists
         raise InputIsNotDirException()
 
-    scriptPath: str = os.path.abspath(r"FastXlsToCsv\vbScripts\ConvertXlDir.vbs")
+    scriptPath: str = os.path.abspath(r"FastXlsToCsv\vbScripts\ConvertXlDir.vbs") #Finds the absolute path on the system
 
     try: 
-        subprocess.run(["cscript", scriptPath, inputDir, outputDir], check = True)
+        subprocess.run(["cscript", scriptPath, inputDir, outputDir], check = True) #Runs the vb script with the arguments
     except:
         raise FastXlsToCsvModuleException()
 
@@ -59,16 +59,16 @@ def convertXlFileToCsv(inputFile: str, outputDir: str) -> None:
     contact developer https://github.com/willayy
     """
 
-    if __checkIfFileExists(inputFile) is False:
+    if __checkIfFileExists(inputFile) is False: #Checks if file exists
         raise InputIsNotFileException()
     
-    if __checkIfFileIsXlFile(inputFile) is False:
+    if __checkIfFileIsXlFile(inputFile) is False: #Checks if the extension is .xls/.xlsx
         raise InputIsNotXlFileException()
     
-    scriptPath: str = os.path.abspath(r"FastXlsToCsv\vbScripts\ConvertXlFile.vbs")
+    scriptPath: str = os.path.abspath(r"FastXlsToCsv\vbScripts\ConvertXlFile.vbs") #Finds the absolute path on the system
     
     try: 
-        subprocess.run(["cscript", scriptPath, inputFile, outputDir])
+        subprocess.run(["cscript", scriptPath, inputFile, outputDir]) #Runs the vb script with the arguments
     except:
         raise FastXlsToCsvModuleException()
 

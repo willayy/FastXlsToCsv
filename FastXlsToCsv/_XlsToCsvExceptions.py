@@ -1,3 +1,7 @@
+"""
+Just custom FastXlsToCsv exceptions to make debugging when using this module easier.
+"""
+
 class InputIsNotDirException(Exception):
     def __init__(self, message = "The provided input tp inputDir is not a str path to a directory that exists") -> None:
         super().__init__(message)
