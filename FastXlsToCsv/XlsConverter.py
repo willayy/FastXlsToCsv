@@ -5,9 +5,7 @@ William Norland, 2023, https://github.com/willayy
 ### Requirements:
 You have Excel installed on your computer, only tested with Microsoft Excel 2016.
 ### How to use?:
-Instantiate an object of this class to gain access to conversion methods, you can choose to exclude a excelPath argument in the constructor.
-Excluding excelPath will make XlsConverter try to find your excel installation by trying from a small set of options. As you may understand this is not very safe so 
-providing your own path is recommended.
+Call methods convertXlFile() and convertXlDir() from this module to convert excel files to csv,
 ### Github
 https://github.com/willayy/FastXlsToCsv
 """
@@ -16,7 +14,7 @@ from FastXlsToCsv._XlsToCsvExceptions import *
 import subprocess
 import os
 
-def convertXlsDirToCsv(inputDir: str, outputDir: str) -> None:
+def convertXlDirToCsv(inputDir: str, outputDir: str) -> None:
     """
     ## Convert Xls/Xlsx Dir to Csv
     ### inputDir: 
@@ -43,7 +41,7 @@ def convertXlsDirToCsv(inputDir: str, outputDir: str) -> None:
     except:
         raise FastXlsToCsvModuleException()
 
-def convertXlsFileToCsv(inputFile: str, outputDir: str) -> None:
+def convertXlFileToCsv(inputFile: str, outputDir: str) -> None:
     """
     ## Convert Xls/Xlsx File to Csv
     ## inputFile:
