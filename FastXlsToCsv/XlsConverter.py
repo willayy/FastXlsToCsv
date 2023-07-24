@@ -12,7 +12,7 @@ providing your own path is recommended.
 https://github.com/willayy/FastXlsToCsv
 """
 
-from _XlsToCsvExceptions import *
+from FastXlsToCsv._XlsToCsvExceptions import *
 import subprocess
 import os
 
