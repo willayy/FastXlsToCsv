@@ -17,5 +17,6 @@ input = r"c:\Users\someone\Desktop\ExcelFiles\excelFileThatWantsTobeCsv.xlsx"
 output =  r"c:\Users\someone\Desktop\FolderForExportedCsvs"
 XlsConverter.convertXlsFileToCsv(input, output)
 ```
-
+## License
+Relased under the MIT License, check FastXlsToCsv/LICENSE for more information
 
