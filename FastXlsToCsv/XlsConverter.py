@@ -1,5 +1,5 @@
 """
-## XlsConverter Module
+## XlsConverter Module v.1.0.0
 #### Made by:
 William Norland, 2023, https://github.com/willayy
 ### Requirements:
