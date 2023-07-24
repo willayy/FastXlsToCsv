@@ -11,8 +11,8 @@ inputExcelFile = WScript.Arguments(0)
 outputDir = WScript.Arguments(1)
 
 Function RemoveExcelExtension(fileName)
-    fileName = Replace(fileName, ".xls", "", 1, -1, vbTextCompare) ' Replace .xls with an empty string
     fileName = Replace(fileName, ".xlsx", "", 1, -1, vbTextCompare) ' Replace .xlsx with an empty string
+    fileName = Replace(fileName, ".xls", "", 1, -1, vbTextCompare) ' Replace .xls with an empty string
 
     RemoveExcelExtension = fileName
 End Function

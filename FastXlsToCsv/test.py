@@ -1,7 +1,8 @@
-from XlsConverter import XlsConverter
+from FastXlsToCsv import XlsConverter
 
 
-converter = XlsConverter()
-input = r"c:\Users\S3136G\Desktop\New folder"
+
+input = r"c:\Users\S3136G\Desktop\New folder\aaa.xlsx"
 output =  r"c:\Users\S3136G\Desktop\ImBassssinh"
-converter.convertXlsDirToCsv(input, output)
+XlsConverter.convertXlsFileToCsv(input, output)
+
