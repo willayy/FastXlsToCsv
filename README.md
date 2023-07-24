@@ -1,6 +1,6 @@
 # FastXlsToCsv
 ### Made by William Norland, 2023
-Fast way to convert large .xls/.xlsx files to CSV by saving them via .vbs and runnin the vbs with windows script host.
+Fast way to convert large .xls/.xlsx files to CSV by saving them via a vbs and running the vbs with windows script host.
 ## Dependencies
 * Excel (Only tested on excel 2016) and 
 * Windows operating system (Only tested on Windows 10)
