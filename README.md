@@ -10,13 +10,17 @@ Fast way to convert large .xls/.xlsx files to CSV by saving them via a vbs and r
 * Windows script host (Exists on pretty much every windows ever).
 
 ## Usage
+### Install
+![Screenshot (1)](https://github.com/willayy/FastXlsToCsv/assets/117913560/f3d7e81d-346b-49d3-8992-e8c948f8162d)
 ### Import
 ![Screenshot (52)](https://github.com/willayy/FastXlsToCsv/assets/117913560/4ff08183-e8db-4c71-941e-e9864462c9f3)
 ### Use
 ```python
-input = r"c:\Users\someone\Desktop\ExcelFiles\excelFileThatWantsTobeCsv.xlsx"
-output =  r"c:\Users\someone\Desktop\FolderForExportedCsvs"
-XlsConverter.convertXlsFileToCsv(input, output)
+inputFile: str = r"c:\Users\someone\Desktop\ExcelFiles\excelFileThatWantsTobeCsv.xlsx"
+inputDir: str = r"c:\Users\someone\Desktop\ExcelFiles"
+outputDir: str =  r"c:\Users\someone\Desktop\FolderForExportedCsvs"
+XlsConverter.convertXlFileToCsv(inputFile, output)
+XlsConverter.convertXlDir(inputDir, output)
 ```
 
 ## License
