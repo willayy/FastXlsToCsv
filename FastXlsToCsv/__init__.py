@@ -1,4 +1,4 @@
-from FastXlsToCsv import XlsConverter
-from FastXlsToCsv.XlsConverter import convertXlDirToCsv, convertXlFileToCsv
+from FastXlsToCsv import XlConverter
+from FastXlsToCsv.XlConverter import convertXlDirToCsv, convertXlFileToCsv
 
-__all__ = ['XlsConverter', 'convertXlDirToCsv', 'convertXlFileToCsv']
+__all__ = ['XlConverter', 'convertXlDirToCsv', 'convertXlFileToCsv']
