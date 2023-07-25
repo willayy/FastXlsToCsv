@@ -14,7 +14,9 @@ setup(
     author='William Norland',
     packages=find_packages(),
     install_requires=[],  # Add any dependencies here,
-    classifiers= ['License :: OSI Approved :: MIT License',
+    classifiers= ['Operating System :: Windows,',
+                  'Operating System :: Windows 10',
+                  'License :: OSI Approved :: MIT License',
                   'Programming Language :: Python',
                   'Programming Language :: Python :: 3',
                   'Programming Language :: Python :: 3.11']
