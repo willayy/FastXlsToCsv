@@ -5,7 +5,7 @@ with open('LONGDESCRIPTION.rst', 'r', encoding='utf-8') as f:
 
 setup(
     name='FastXlsToCsv',
-    version='1.0.0',
+    version='1.0.1',
     description='A fast way to convert .xls and .xlsx to csv with vbs',
     long_description= long_description,
     url= 'https://github.com/willayy/FastXlsToCsv',
