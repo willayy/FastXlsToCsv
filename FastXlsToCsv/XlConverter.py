@@ -1,5 +1,5 @@
 """
-## XlsConverter Module from FastXlsToCsv v.1.0.1
+## XlsConverter Module from FastXlsToCsv v.1.1.0
 #### Made by:
 William Norland, 2023, https://github.com/willayy
 ### Requirements:
