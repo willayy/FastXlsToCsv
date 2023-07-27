@@ -2,6 +2,9 @@
 ### Made by William Norland, 2023
 
 Fast way to convert large .xls/.xlsx files to CSV by saving them via a vbs running via windows script host.
+## Why?
+During a project i did i noticed how slow pandas read excel files to dataframe, because pandas reads csv to dataframe much faster i decied to release my solution
+for turning excel into csv!
 
 ## Dependencies
 * Excel (Only tested on excel 2016) and .
@@ -11,7 +14,7 @@ Fast way to convert large .xls/.xlsx files to CSV by saving them via a vbs runni
 
 ## Usage
 ### Install
-![Screenshot (1)](https://github.com/willayy/FastXlsToCsv/assets/117913560/f3d7e81d-346b-49d3-8992-e8c948f8162d)
+![Screenshot (2)](https://github.com/willayy/FastXlsToCsv/assets/117913560/49003561-1f42-4bbc-90c3-7316b9549314)
 ### Import
 ![Screenshot (52)](https://github.com/willayy/FastXlsToCsv/assets/117913560/4ff08183-e8db-4c71-941e-e9864462c9f3)
 ### Use
