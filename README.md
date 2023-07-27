@@ -16,7 +16,7 @@ for turning excel into csv!
 ### Install
 ![Screenshot (2)](https://github.com/willayy/FastXlsToCsv/assets/117913560/49003561-1f42-4bbc-90c3-7316b9549314)
 ### Import
-![Screenshot (52)](https://github.com/willayy/FastXlsToCsv/assets/117913560/4ff08183-e8db-4c71-941e-e9864462c9f3)
+![Screenshot (3)](https://github.com/willayy/FastXlsToCsv/assets/117913560/a4891cc7-09af-41e3-a61e-8201741506ac)
 ### Use
 ```python
 inputFile: str = r"c:\Users\someone\Desktop\ExcelFiles\excelFileThatWantsTobeCsv.xlsx"
