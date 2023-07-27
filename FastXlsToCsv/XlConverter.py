@@ -1,11 +1,11 @@
 """
 ## XlsConverter Module from FastXlsToCsv v.1.2.1
 #### Made by:
-William Norland, 2023, https://github.com/willayy
+William Norland, 2023
 ### Requirements:
-You have Excel installed on your computer, only tested with Microsoft Excel 2016.
+You need to have Excel installed on your system, only tested with Microsoft Excel 2016.
 ### How to use?:
-Call methods convertXlFile() and convertXlDir() from this module to convert excel files to csv,
+Call methods convertXlFile() and convertXlDir() from this module to convert excel files to csv.
 ### Github
 https://github.com/willayy/FastXlsToCsv
 """
@@ -28,7 +28,7 @@ def convertXlDirToCsv(inputDir: str, outputDir: str) -> None:
     If the input dir wasnt found, likely a problem with the str path.
     #### FastXlsToCsvModuleException: 
     If something within the module doesnt go/work as excpected, please check input and if that doesnt fix it
-    contact developer https://github.com/willayy
+    contact developer/maintainer https://github.com/willayy
     """
 
     if __checkIfPathIsDir(inputDir) is False: #Checks if the dir exists
@@ -56,7 +56,7 @@ def convertXlFileToCsv(inputFile: str, outputDir: str) -> None:
     If the input file wasnt xls/xlsx, likely a file with the wrong exception.
     #### FastXlsToCsvModuleException: 
     If something doesnt go/work as excpected, please check input and if that doesnt fix it
-    contact developer https://github.com/willayy
+    contact developer/maintainer https://github.com/willayy
     """
 
     if __checkIfFileExists(inputFile) is False: #Checks if file exists
