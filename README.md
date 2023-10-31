@@ -7,9 +7,9 @@ During a project i did i noticed how slow pandas read excel files to dataframe, 
 for turning excel into csv!
 
 ## Dependencies
-* Excel (Only tested on excel 2016) and .
+* Excel (Only tested on excel 2016).
 * Windows operating system (Only tested on Windows 10).
-* Only tested on Python 3.11, should probably work on any python that has os and subprocess.
+* Only tested on Python 3.11, should probably work on any python.
 * Windows script host (Exists on pretty much every windows ever).
 
 ## Usage
